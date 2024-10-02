@@ -1,5 +1,6 @@
 <?php
 //[card]---------------------------------------------------------------------------------------------------------------
+$bootstrap = service("bootstrap");
 $card = $bootstrap->get_Card("card-view-service", array(
     "title" => lang('Components.list-title'),
     "header-back" => $back,
