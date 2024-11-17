@@ -93,7 +93,15 @@ $bgrid->set_Headers(array(
     array("content" => lang("App.Date"), "class" => "text-center align-middle"),
     array("content" => lang("App.Options"), "class" => "text-center  align-middle"),
 ));
+$bgrid->set_Buttons(
+    array(
+        $bootstrap->get_Link("btn-bill", array("size" => "sm", "icon" => ICON_PLUS, "text" => "Facturar", "title" => lang("App.New"), "data-bs-toggle" => "modal", "data-bs-target" => "#invoiceModal")),
+        $bootstrap->get_Link("btn-secondary", array("size" => "sm", "icon" => ICON_BACK, "title" => lang("App.Back"), "href" => $back)),
+    )
+);
 $bgrid->set_Search(array("search" => $search, "field" => $field, "fields" => $fields,));
+
+
 $count = $offset;
 foreach ($enrollments as $enrollment) {
     $count++;
